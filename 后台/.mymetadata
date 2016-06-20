@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ego"
+  id="myeclipse.1461286445383"
+  context-root="/ego"
+  j2ee-spec="6.0"
+  archive="ego.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

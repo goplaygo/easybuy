@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddUserServlet</servlet-name>
+    <servlet-class>com.jd.servlet.AddUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.jd.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegiterServlet</servlet-name>
+    <servlet-class>com.jd.servlet.RegiterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProduceListServlet</servlet-name>
+    <servlet-class>com.jd.servlet.ProduceListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AlipayServlet</servlet-name>
+    <servlet-class>com.jd.servlet.AlipayServlet</servlet-class>
+  </servlet>
+	
+
+
+  <servlet-mapping>
+    <servlet-name>AddUserServlet</servlet-name>
+    <url-pattern>/AddUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegiterServlet</servlet-name>
+    <url-pattern>/RegiterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProduceListServlet</servlet-name>
+    <url-pattern>/ProduceListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AlipayServlet</servlet-name>
+    <url-pattern>/AlipayServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 过滤器 -->
+  <filter>
+  		<description>越权访问控制过滤器</description>
+  		<filter-name>LoginFilter</filter-name>
+  		<filter-class>com.jd.filter.LoginFilter</filter-class>
+  
+  </filter>
+  <filter-mapping>
+  		<filter-name>LoginFilter</filter-name>
+  		<url-pattern>/room/*</url-pattern>
+  		<dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
+  <filter>
+  		<description>中文乱码问题</description>
+  		<filter-name>EncodingFilter</filter-name>
+  		<filter-class>com.jd.filter.EncodingFilter</filter-class>
+  
+  </filter>
+  <filter-mapping>
+  		<filter-name>EncodingFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  		
+  </filter-mapping>
+</web-app>
